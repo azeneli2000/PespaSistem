@@ -1,0 +1,14 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\PespaSistemLibrary.dll
+bin\Debug\PespaSistemLibrary.pdb
+obj\Debug\PespaSistemLibrary.csproj.GenerateResource.Cache
+obj\Debug\PespaSistemLibrary.dll
+obj\Debug\PespaSistemLibrary.pdb
+obj\Debug\PespaSistemLibrary.Form.resources
+bin\Debug\DevComponents.DotNetBar.dll
+bin\Debug\Janus.Windows.Common.dll
+bin\Debug\Janus.Windows.Common.v2.dll
+bin\Debug\janus.windows.ui.v2.dll
+bin\Debug\Jyc.Expr.dll
+obj\Debug\PespaSistemLibrary.dll.licenses
+bin\Debug\Janus.Windows.GridEX.dll

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsShtoAksesoreProdukti" targetNamespace="http://tempuri.org/DsShtoAksesoreProdukti.xsd" xmlns:mstns="http://tempuri.org/DsShtoAksesoreProdukti.xsd" xmlns="http://tempuri.org/DsShtoAksesoreProdukti.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PespaSistemConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="PespaSistemConnectionString (Settings)" PropertyReference="ApplicationSettings.PespaSistem.Properties.Settings.GlobalReference.Default.PespaSistemConnectionString" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AKSESORE_TOTALTableAdapter" GeneratorDataComponentClassName="AKSESORE_TOTALTableAdapter" Name="AKSESORE_TOTAL" UserDataComponentName="AKSESORE_TOTALTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PespaSistemConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT     "Alumin" AS LLOJ_AKSESORE, ALUMIN.ID_ALUMINI AS ID_AKSESORE, ALUMIN.KOD_ALUMINI AS KOD_AKSESORE, ALUMIN.EMER_ALUMINI AS EMER_AKSESORE, 
+                      ALUMIN.ID_CMIMI, CMIMET.CMIMI, ALUMIN.NJESIA_MATESE, ALUMIN.PESHA_SPECIFIKE
+FROM         (ALUMIN INNER JOIN
+                      CMIMET ON ALUMIN.ID_CMIMI = CMIMET.ID_CMIMI)
+UNION ALL
+SELECT     "Aksesore", AKSESORE.ID_AKSESORI, AKSESORE.KOD_AKSESORI, AKSESORE.EMER_AKSESORI, AKSESORE.ID_CMIMI, CMIMET_2.CMIMI, 
+                      AKSESORE.NJESIA_MATESE, NULL
+FROM         (AKSESORE INNER JOIN
+                      CMIMET CMIMET_2 ON AKSESORE.ID_CMIMI = CMIMET_2.ID_CMIMI)
+UNION ALL
+SELECT     "Xham", XHAM.ID_XHAMI, XHAM.KOD_XHAMI, XHAM.EMER_XHAMI, XHAM.ID_CMIMI, CMIMET_1.CMIMI, XHAM.NJESIA_MATESE, NULL
+FROM         (XHAM INNER JOIN
+                      CMIMET CMIMET_1 ON XHAM.ID_CMIMI = CMIMET_1.ID_CMIMI)</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_ALUMINI" DataSetColumn="ID_AKSESORE" />
+              <Mapping SourceColumn="KOD_ALUMINI" DataSetColumn="KOD_AKSESORE" />
+              <Mapping SourceColumn="EMER_ALUMINI" DataSetColumn="EMER_AKSESORE" />
+              <Mapping SourceColumn="CMIMI" DataSetColumn="CMIMI" />
+              <Mapping SourceColumn="NJESIA_MATESE" DataSetColumn="NJESIA_MATESE" />
+              <Mapping SourceColumn="ID_AKSESORE" DataSetColumn="ID_AKSESORE" />
+              <Mapping SourceColumn="KOD_AKSESORE" DataSetColumn="KOD_AKSESORE" />
+              <Mapping SourceColumn="EMER_AKSESORE" DataSetColumn="EMER_AKSESORE" />
+              <Mapping SourceColumn="ID_CMIMI" DataSetColumn="ID_CMIMI" />
+              <Mapping SourceColumn="PESHA_SPECIFIKE" DataSetColumn="PESHA_SPECIFIKE" />
+              <Mapping SourceColumn="LLOJ_AKSESORE" DataSetColumn="LLOJ_AKSESORE" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="PespaSistemConnectionString (Settings)" DbObjectName="SELECT 'Alumin' AS LLOJ_AKSESORE, ALUMIN.ID_ALUMINI AS ID_AKSESORE, ALUMIN.KOD_ALUMINI AS KOD_AKSESORE, ALUMIN.EMER_ALUMINI AS EMER_AKSESORE, ALUMIN.ID_CMIMI, CMIMET.CMIMI, ALUMIN.NJESIA_MATESE, ALUMIN.PESHA_SPECIFIKE FROM (ALUMIN INNER JOIN CMIMET ON ALUMIN.ID_CMIMI = CMIMET.ID_CMIMI) UNION ALL SELECT 'Aksesore' AS LLOJ_AKSESORE, AKSESORE.ID_AKSESORI, AKSESORE.KOD_AKSESORI, AKSESORE.EMER_AKSESORI, AKSESORE.ID_CMIMI, CMIMET_2.CMIMI, AKSESORE.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE FROM (AKSESORE INNER JOIN CMIMET AS CMIMET_2 ON AKSESORE.ID_CMIMI = CMIMET_2.ID_CMIMI) UNION ALL SELECT 'Xham' AS LLOJ_AKSESORE, XHAM.ID_XHAMI, XHAM.KOD_XHAMI, XHAM.EMER_XHAMI, XHAM.ID_CMIMI, CMIMET_1.CMIMI, XHAM.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE FROM (XHAM INNER JOIN CMIMET AS CMIMET_1 ON XHAM.ID_CMIMI = CMIMET_1.ID_CMIMI)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByEmerAksesore" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByEmerAksesore" GeneratorSourceName="FillByEmerAksesore" GetMethodModifier="Public" GetMethodName="GetDataByEmerAksesore" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByEmerAksesore" UserSourceName="FillByEmerAksesore">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT * FROM
+(
+SELECT     'Alumin' AS LLOJ_AKSESORE, ALUMIN.ID_ALUMINI AS ID_AKSESORE, ALUMIN.KOD_ALUMINI AS KOD_AKSESORE, 
+                      ALUMIN.EMER_ALUMINI AS EMER_AKSESORE, ALUMIN.ID_CMIMI, CMIMET.CMIMI, ALUMIN.NJESIA_MATESE, ALUMIN.PESHA_SPECIFIKE
+FROM         (ALUMIN INNER JOIN
+                      CMIMET ON ALUMIN.ID_CMIMI = CMIMET.ID_CMIMI)
+UNION ALL
+SELECT     'Aksesore' AS LLOJ_AKSESORE, AKSESORE.ID_AKSESORI, AKSESORE.KOD_AKSESORI, AKSESORE.EMER_AKSESORI, AKSESORE.ID_CMIMI, CMIMET_2.CMIMI, 
+                      AKSESORE.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE
+FROM         (AKSESORE INNER JOIN
+                      CMIMET AS CMIMET_2 ON AKSESORE.ID_CMIMI = CMIMET_2.ID_CMIMI)
+UNION ALL
+SELECT     'Xham' AS LLOJ_AKSESORE, XHAM.ID_XHAMI, XHAM.KOD_XHAMI, XHAM.EMER_XHAMI, XHAM.ID_CMIMI, CMIMET_1.CMIMI, XHAM.NJESIA_MATESE, NULL 
+                      AS PESHA_SPECIFIKE
+FROM         (XHAM INNER JOIN
+                      CMIMET AS  CMIMET_1 ON XHAM.ID_CMIMI = CMIMET_1.ID_CMIMI)
+)
+WHERE (EMER_AKSESORE LIKE ? + '%')</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="EMER_AKSESORE" DataSourceName="SELECT 'Alumin' AS LLOJ_AKSESORE, ALUMIN.ID_ALUMINI AS ID_AKSESORE, ALUMIN.KOD_ALUMINI AS KOD_AKSESORE, ALUMIN.EMER_ALUMINI AS EMER_AKSESORE, ALUMIN.ID_CMIMI, CMIMET.CMIMI, ALUMIN.NJESIA_MATESE, ALUMIN.PESHA_SPECIFIKE FROM (ALUMIN INNER JOIN CMIMET ON ALUMIN.ID_CMIMI = CMIMET.ID_CMIMI) UNION ALL SELECT 'Aksesore' AS LLOJ_AKSESORE, AKSESORE.ID_AKSESORI, AKSESORE.KOD_AKSESORI, AKSESORE.EMER_AKSESORI, AKSESORE.ID_CMIMI, CMIMET_2.CMIMI, AKSESORE.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE FROM (AKSESORE INNER JOIN CMIMET AS CMIMET_2 ON AKSESORE.ID_CMIMI = CMIMET_2.ID_CMIMI) UNION ALL SELECT 'Xham' AS LLOJ_AKSESORE, XHAM.ID_XHAMI, XHAM.KOD_XHAMI, XHAM.EMER_XHAMI, XHAM.ID_CMIMI, CMIMET_1.CMIMI, XHAM.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE FROM (XHAM INNER JOIN CMIMET AS CMIMET_1 ON XHAM.ID_CMIMI = CMIMET_1.ID_CMIMI)" DataTypeServer="DbType.StringFixedLength(50)" DbType="String" Direction="Input" ParameterName="EMER_AKSESORE" Precision="0" Scale="0" Size="50" SourceColumn="EMER_AKSESORE" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PespaSistemConnectionString (Settings)" DbObjectName="SELECT 'Alumin' AS LLOJ_AKSESORE, ALUMIN.ID_ALUMINI AS ID_AKSESORE, ALUMIN.KOD_ALUMINI AS KOD_AKSESORE, ALUMIN.EMER_ALUMINI AS EMER_AKSESORE, ALUMIN.ID_CMIMI, CMIMET.CMIMI, ALUMIN.NJESIA_MATESE, ALUMIN.PESHA_SPECIFIKE FROM (ALUMIN INNER JOIN CMIMET ON ALUMIN.ID_CMIMI = CMIMET.ID_CMIMI) UNION ALL SELECT 'Aksesore' AS LLOJ_AKSESORE, AKSESORE.ID_AKSESORI, AKSESORE.KOD_AKSESORI, AKSESORE.EMER_AKSESORI, AKSESORE.ID_CMIMI, CMIMET_2.CMIMI, AKSESORE.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE FROM (AKSESORE INNER JOIN CMIMET CMIMET_2 ON AKSESORE.ID_CMIMI = CMIMET_2.ID_CMIMI) UNION ALL SELECT 'Xham' AS LLOJ_AKSESORE, XHAM.ID_XHAMI, XHAM.KOD_XHAMI, XHAM.EMER_XHAMI, XHAM.ID_CMIMI, CMIMET_1.CMIMI, XHAM.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE FROM (XHAM INNER JOIN CMIMET CMIMET_1 ON XHAM.ID_CMIMI = CMIMET_1.ID_CMIMI)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByKodAksesore" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByKodAksesore" GeneratorSourceName="FillByKodAksesore" GetMethodModifier="Public" GetMethodName="GetDataByKodAksesore" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByKodAksesore" UserSourceName="FillByKodAksesore">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT     LLOJ_AKSESORE, ID_AKSESORE, KOD_AKSESORE, EMER_AKSESORE, ID_CMIMI, CMIMI, NJESIA_MATESE, PESHA_SPECIFIKE
+FROM         (SELECT     'Alumin' AS LLOJ_AKSESORE, ALUMIN.ID_ALUMINI AS ID_AKSESORE, ALUMIN.KOD_ALUMINI AS KOD_AKSESORE, 
+                                              ALUMIN.EMER_ALUMINI AS EMER_AKSESORE, ALUMIN.ID_CMIMI, CMIMET.CMIMI, ALUMIN.NJESIA_MATESE, 
+                                              ALUMIN.PESHA_SPECIFIKE
+                       FROM          (ALUMIN INNER JOIN
+                                              CMIMET ON ALUMIN.ID_CMIMI = CMIMET.ID_CMIMI)
+                       UNION ALL
+                       SELECT     'Aksesore' AS LLOJ_AKSESORE, AKSESORE.ID_AKSESORI, AKSESORE.KOD_AKSESORI, AKSESORE.EMER_AKSESORI, 
+                                             AKSESORE.ID_CMIMI, CMIMET_2.CMIMI, AKSESORE.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE
+                       FROM         (AKSESORE INNER JOIN
+                                             CMIMET CMIMET_2 ON AKSESORE.ID_CMIMI = CMIMET_2.ID_CMIMI)
+                       UNION ALL
+                       SELECT     'Xham' AS LLOJ_AKSESORE, XHAM.ID_XHAMI, XHAM.KOD_XHAMI, XHAM.EMER_XHAMI, XHAM.ID_CMIMI, CMIMET_1.CMIMI, 
+                                             XHAM.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE
+                       FROM         (XHAM INNER JOIN
+                                             CMIMET CMIMET_1 ON XHAM.ID_CMIMI = CMIMET_1.ID_CMIMI))
+WHERE     (KOD_AKSESORE LIKE ? + '%')</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="KOD_AKSESORE" DataSourceName="SELECT 'Alumin' AS LLOJ_AKSESORE, ALUMIN.ID_ALUMINI AS ID_AKSESORE, ALUMIN.KOD_ALUMINI AS KOD_AKSESORE, ALUMIN.EMER_ALUMINI AS EMER_AKSESORE, ALUMIN.ID_CMIMI, CMIMET.CMIMI, ALUMIN.NJESIA_MATESE, ALUMIN.PESHA_SPECIFIKE FROM (ALUMIN INNER JOIN CMIMET ON ALUMIN.ID_CMIMI = CMIMET.ID_CMIMI) UNION ALL SELECT 'Aksesore' AS LLOJ_AKSESORE, AKSESORE.ID_AKSESORI, AKSESORE.KOD_AKSESORI, AKSESORE.EMER_AKSESORI, AKSESORE.ID_CMIMI, CMIMET_2.CMIMI, AKSESORE.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE FROM (AKSESORE INNER JOIN CMIMET CMIMET_2 ON AKSESORE.ID_CMIMI = CMIMET_2.ID_CMIMI) UNION ALL SELECT 'Xham' AS LLOJ_AKSESORE, XHAM.ID_XHAMI, XHAM.KOD_XHAMI, XHAM.EMER_XHAMI, XHAM.ID_CMIMI, CMIMET_1.CMIMI, XHAM.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE FROM (XHAM INNER JOIN CMIMET CMIMET_1 ON XHAM.ID_CMIMI = CMIMET_1.ID_CMIMI)" DataTypeServer="DbType.StringFixedLength(50)" DbType="String" Direction="Input" ParameterName="KOD_AKSESORE" Precision="0" Scale="0" Size="50" SourceColumn="KOD_AKSESORE" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PespaSistemConnectionString (Settings)" DbObjectName="SELECT 'Alumin' AS LLOJ_AKSESORE, ALUMIN.ID_ALUMINI AS ID_AKSESORE, ALUMIN.KOD_ALUMINI AS KOD_AKSESORE, ALUMIN.EMER_ALUMINI AS EMER_AKSESORE, ALUMIN.ID_CMIMI, CMIMET.CMIMI, ALUMIN.NJESIA_MATESE, ALUMIN.PESHA_SPECIFIKE FROM (ALUMIN INNER JOIN CMIMET ON ALUMIN.ID_CMIMI = CMIMET.ID_CMIMI) UNION ALL SELECT 'Aksesore' AS LLOJ_AKSESORE, AKSESORE.ID_AKSESORI, AKSESORE.KOD_AKSESORI, AKSESORE.EMER_AKSESORI, AKSESORE.ID_CMIMI, CMIMET_2.CMIMI, AKSESORE.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE FROM (AKSESORE INNER JOIN CMIMET AS CMIMET_2 ON AKSESORE.ID_CMIMI = CMIMET_2.ID_CMIMI) UNION ALL SELECT 'Xham' AS LLOJ_AKSESORE, XHAM.ID_XHAMI, XHAM.KOD_XHAMI, XHAM.EMER_XHAMI, XHAM.ID_CMIMI, CMIMET_1.CMIMI, XHAM.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE FROM (XHAM INNER JOIN CMIMET AS CMIMET_1 ON XHAM.ID_CMIMI = CMIMET_1.ID_CMIMI)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByLlojAksesore" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByLlojAksesore" GeneratorSourceName="FillByLlojAksesore" GetMethodModifier="Public" GetMethodName="GetDataByLlojAksesore" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByLlojAksesore" UserSourceName="FillByLlojAksesore">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT * FROM
+(
+SELECT     'Alumin' AS LLOJ_AKSESORE, ALUMIN.ID_ALUMINI AS ID_AKSESORE, ALUMIN.KOD_ALUMINI AS KOD_AKSESORE, 
+                      ALUMIN.EMER_ALUMINI AS EMER_AKSESORE, ALUMIN.ID_CMIMI, CMIMET.CMIMI, ALUMIN.NJESIA_MATESE, ALUMIN.PESHA_SPECIFIKE
+FROM         (ALUMIN INNER JOIN
+                      CMIMET ON ALUMIN.ID_CMIMI = CMIMET.ID_CMIMI)
+UNION ALL
+SELECT     'Aksesore' AS LLOJ_AKSESORE, AKSESORE.ID_AKSESORI, AKSESORE.KOD_AKSESORI, AKSESORE.EMER_AKSESORI, AKSESORE.ID_CMIMI, CMIMET_2.CMIMI, 
+                      AKSESORE.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE
+FROM         (AKSESORE INNER JOIN
+                      CMIMET AS CMIMET_2 ON AKSESORE.ID_CMIMI = CMIMET_2.ID_CMIMI)
+UNION ALL
+SELECT     'Xham' AS LLOJ_AKSESORE, XHAM.ID_XHAMI, XHAM.KOD_XHAMI, XHAM.EMER_XHAMI, XHAM.ID_CMIMI, CMIMET_1.CMIMI, XHAM.NJESIA_MATESE, NULL 
+                      AS PESHA_SPECIFIKE
+FROM         (XHAM INNER JOIN
+                      CMIMET AS  CMIMET_1 ON XHAM.ID_CMIMI = CMIMET_1.ID_CMIMI)
+)
+WHERE (LLOJ_AKSESORE = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param1" ColumnName="LLOJ_AKSESORE" DataSourceName="SELECT 'Alumin' AS LLOJ_AKSESORE, ALUMIN.ID_ALUMINI AS ID_AKSESORE, ALUMIN.KOD_ALUMINI AS KOD_AKSESORE, ALUMIN.EMER_ALUMINI AS EMER_AKSESORE, ALUMIN.ID_CMIMI, CMIMET.CMIMI, ALUMIN.NJESIA_MATESE, ALUMIN.PESHA_SPECIFIKE FROM (ALUMIN INNER JOIN CMIMET ON ALUMIN.ID_CMIMI = CMIMET.ID_CMIMI) UNION ALL SELECT 'Aksesore' AS LLOJ_AKSESORE, AKSESORE.ID_AKSESORI, AKSESORE.KOD_AKSESORI, AKSESORE.EMER_AKSESORI, AKSESORE.ID_CMIMI, CMIMET_2.CMIMI, AKSESORE.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE FROM (AKSESORE INNER JOIN CMIMET AS CMIMET_2 ON AKSESORE.ID_CMIMI = CMIMET_2.ID_CMIMI) UNION ALL SELECT 'Xham' AS LLOJ_AKSESORE, XHAM.ID_XHAMI, XHAM.KOD_XHAMI, XHAM.EMER_XHAMI, XHAM.ID_CMIMI, CMIMET_1.CMIMI, XHAM.NJESIA_MATESE, NULL AS PESHA_SPECIFIKE FROM (XHAM INNER JOIN CMIMET AS CMIMET_1 ON XHAM.ID_CMIMI = CMIMET_1.ID_CMIMI)" DataTypeServer="unknown" DbType="AnsiString" Direction="Input" ParameterName="LLOJ_AKSESORE" Precision="0" Scale="0" Size="1024" SourceColumn="LLOJ_AKSESORE" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsShtoAksesoreProdukti" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsShtoAksesoreProdukti" msprop:Generator_DataSetName="DsShtoAksesoreProdukti">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AKSESORE_TOTAL" msprop:Generator_UserTableName="AKSESORE_TOTAL" msprop:Generator_RowDeletedName="AKSESORE_TOTALRowDeleted" msprop:Generator_RowChangedName="AKSESORE_TOTALRowChanged" msprop:Generator_RowClassName="AKSESORE_TOTALRow" msprop:Generator_RowChangingName="AKSESORE_TOTALRowChanging" msprop:Generator_RowEvArgName="AKSESORE_TOTALRowChangeEvent" msprop:Generator_RowEvHandlerName="AKSESORE_TOTALRowChangeEventHandler" msprop:Generator_TableClassName="AKSESORE_TOTALDataTable" msprop:Generator_TableVarName="tableAKSESORE_TOTAL" msprop:Generator_RowDeletingName="AKSESORE_TOTALRowDeleting" msprop:Generator_TablePropName="AKSESORE_TOTAL">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_AKSESORE" msprop:Generator_UserColumnName="ID_AKSESORE" msprop:Generator_ColumnPropNameInRow="ID_AKSESORE" msprop:Generator_ColumnVarNameInTable="columnID_AKSESORE" msprop:Generator_ColumnPropNameInTable="ID_AKSESOREColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="KOD_AKSESORE" msdata:Caption="KOD_ALUMINI" msprop:Generator_UserColumnName="KOD_AKSESORE" msprop:Generator_ColumnPropNameInRow="KOD_AKSESORE" msprop:Generator_ColumnVarNameInTable="columnKOD_AKSESORE" msprop:Generator_ColumnPropNameInTable="KOD_AKSESOREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EMER_AKSESORE" msdata:Caption="EMER_ALUMINI" msprop:Generator_UserColumnName="EMER_AKSESORE" msprop:Generator_ColumnPropNameInRow="EMER_AKSESORE" msprop:Generator_ColumnVarNameInTable="columnEMER_AKSESORE" msprop:Generator_ColumnPropNameInTable="EMER_AKSESOREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CMIMI" msprop:Generator_UserColumnName="CMIMI" msprop:Generator_ColumnPropNameInRow="CMIMI" msprop:Generator_ColumnVarNameInTable="columnCMIMI" msprop:Generator_ColumnPropNameInTable="CMIMIColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NJESIA_MATESE" msprop:Generator_UserColumnName="NJESIA_MATESE" msprop:Generator_ColumnPropNameInRow="NJESIA_MATESE" msprop:Generator_ColumnVarNameInTable="columnNJESIA_MATESE" msprop:Generator_ColumnPropNameInTable="NJESIA_MATESEColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_CMIMI" msprop:Generator_UserColumnName="ID_CMIMI" msprop:Generator_ColumnPropNameInRow="ID_CMIMI" msprop:Generator_ColumnVarNameInTable="columnID_CMIMI" msprop:Generator_ColumnPropNameInTable="ID_CMIMIColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PESHA_SPECIFIKE" msprop:Generator_UserColumnName="PESHA_SPECIFIKE" msprop:Generator_ColumnPropNameInRow="PESHA_SPECIFIKE" msprop:Generator_ColumnVarNameInTable="columnPESHA_SPECIFIKE" msprop:Generator_ColumnPropNameInTable="PESHA_SPECIFIKEColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="LLOJ_AKSESORE" msprop:Generator_UserColumnName="LLOJ_AKSESORE" msprop:Generator_ColumnPropNameInRow="LLOJ_AKSESORE" msprop:Generator_ColumnVarNameInTable="columnLLOJ_AKSESORE" msprop:Generator_ColumnPropNameInTable="LLOJ_AKSESOREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

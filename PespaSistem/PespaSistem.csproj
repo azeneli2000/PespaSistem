@@ -1,0 +1,607 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D71504B-A6A8-4289-B745-FCAE1EEBF5D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PespaSistem</RootNamespace>
+    <AssemblyName>PespaSistem</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="DevComponents.DotNetBar, Version=5.9.0.0, Culture=neutral, PublicKeyToken=6d649f5e9b3afca5" />
+    <Reference Include="DocumentManager, Version=0.9.6.0, Culture=neutral, PublicKeyToken=d9f5cd6d45cde5f3" />
+    <Reference Include="Janus.Windows.Common, Version=1.0.2500.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.Common.v2, Version=2.0.1105.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.GridEX, Version=1.0.2500.0, Culture=neutral, PublicKeyToken=21d5517571b185bf">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Janus.Windows.GridEX.dll</HintPath>
+    </Reference>
+    <Reference Include="janus.windows.ui.v2, Version=2.0.1105.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Jyc.Expr, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="PespaSistemLibrary, Version=1.0.2539.32806, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PespaSistemLibrary\bin\Debug\PespaSistemLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrFatura.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrFatura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrProjekte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrProjekte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrRaport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrRaport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DsAksesore.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsAksesore.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsAlumin.cs">
+      <DependentUpon>DsAlumin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsAlumin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsAlumin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsAluminPrAks.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsAluminPrAks.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsFatura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsFatura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsLlojeProduktesh.cs">
+      <DependentUpon>DsLlojeProduktesh.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsLlojeProduktesh.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsLlojeProduktesh.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsPerdorues.cs">
+      <DependentUpon>DsPerdorues.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsPerdorues.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsPerdorues.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsPespaSistem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsPespaSistem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsProduktAksesore.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsProduktAksesore.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsProdukte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsProdukte.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsProdukteProjekte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsProdukteProjekte.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsProduktetAksesoret.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsProduktetAksesoret.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsProdukteTotal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsProdukteTotal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsProjekteData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsProjekteData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsRaport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsRaport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsRoleDrejtat.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsRoleDrejtat.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsShtoAksesoreProdukti.cs">
+      <DependentUpon>DsShtoAksesoreProdukti.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsShtoAksesoreProdukti.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsShtoAksesoreProdukti.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsXham.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsXham.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FaqeKryesore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaqeKryesore.Designer.cs">
+      <DependentUpon>FaqeKryesore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFormule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFormule.Designer.cs">
+      <DependentUpon>FrmFormule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPerdorues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPerdorues.Designer.cs">
+      <DependentUpon>FrmPerdorues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrintim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrintim.Designer.cs">
+      <DependentUpon>FrmPrintim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmShtoProdukt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmShtoProdukt.Designer.cs">
+      <DependentUpon>FrmShtoProdukt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmShtoProduktAksesore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmShtoProduktAksesore.Designer.cs">
+      <DependentUpon>FrmShtoProduktAksesore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStatistika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStatistika.Designer.cs">
+      <DependentUpon>FrmStatistika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmZgjidhPrintim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmZgjidhPrintim.Designer.cs">
+      <DependentUpon>FrmZgjidhPrintim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KonfigurimeAksesore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KonfigurimeAksesore.Designer.cs">
+      <DependentUpon>KonfigurimeAksesore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KonfigurimeAlumin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KonfigurimeAlumin.Designer.cs">
+      <DependentUpon>KonfigurimeAlumin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KonfigurimeDyerMeHapje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KonfigurimeDyerMeHapje.Designer.cs">
+      <DependentUpon>KonfigurimeDyerMeHapje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KonfigurimeTeDrejtash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KonfigurimeTeDrejtash.Designer.cs">
+      <DependentUpon>KonfigurimeTeDrejtash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KonfigurimeXham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KonfigurimeXham.Designer.cs">
+      <DependentUpon>KonfigurimeXham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KopjoProdukt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KopjoProdukt.Designer.cs">
+      <DependentUpon>KopjoProdukt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProduktAksesore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProduktAksesore.Designer.cs">
+      <DependentUpon>ProduktAksesore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CrFatura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrFatura.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrProjekte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrProjekte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrRaport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrRaport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaqeKryesore.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FaqeKryesore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFormule.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmFormule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPerdorues.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmPerdorues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrintim.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmPrintim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmShtoProdukt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmShtoProdukt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmShtoProduktAksesore.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmShtoProduktAksesore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStatistika.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmStatistika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmZgjidhPrintim.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmZgjidhPrintim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KonfigurimeAksesore.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KonfigurimeAksesore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KonfigurimeAlumin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KonfigurimeAlumin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KonfigurimeDyerMeHapje.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KonfigurimeDyerMeHapje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KonfigurimeTeDrejtash.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KonfigurimeTeDrejtash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KonfigurimeXham.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KonfigurimeXham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KopjoProdukt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KopjoProdukt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProduktAksesore.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProduktAksesore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShtoProjekt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShtoProjekt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VlereReale.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VlereReale.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="DsAksesore.xsc">
+      <DependentUpon>DsAksesore.xsd</DependentUpon>
+    </None>
+    <None Include="DsAksesore.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsAksesore.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsAksesore.xss">
+      <DependentUpon>DsAksesore.xsd</DependentUpon>
+    </None>
+    <None Include="DsAlumin.xsc">
+      <DependentUpon>DsAlumin.xsd</DependentUpon>
+    </None>
+    <None Include="DsAlumin.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsAlumin.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsAlumin.xss">
+      <DependentUpon>DsAlumin.xsd</DependentUpon>
+    </None>
+    <None Include="DsAluminPrAks.xsc">
+      <DependentUpon>DsAluminPrAks.xsd</DependentUpon>
+    </None>
+    <None Include="DsAluminPrAks.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsAluminPrAks.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsAluminPrAks.xss">
+      <DependentUpon>DsAluminPrAks.xsd</DependentUpon>
+    </None>
+    <None Include="DsFatura.xsc">
+      <DependentUpon>DsFatura.xsd</DependentUpon>
+    </None>
+    <None Include="DsFatura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsFatura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsFatura.xss">
+      <DependentUpon>DsFatura.xsd</DependentUpon>
+    </None>
+    <None Include="DsLlojeProduktesh.xsc">
+      <DependentUpon>DsLlojeProduktesh.xsd</DependentUpon>
+    </None>
+    <None Include="DsLlojeProduktesh.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsLlojeProduktesh.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsLlojeProduktesh.xss">
+      <DependentUpon>DsLlojeProduktesh.xsd</DependentUpon>
+    </None>
+    <None Include="DsPerdorues.xsc">
+      <DependentUpon>DsPerdorues.xsd</DependentUpon>
+    </None>
+    <None Include="DsPerdorues.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsPerdorues.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsPerdorues.xss">
+      <DependentUpon>DsPerdorues.xsd</DependentUpon>
+    </None>
+    <None Include="DsPespaSistem.xsc">
+      <DependentUpon>DsPespaSistem.xsd</DependentUpon>
+    </None>
+    <None Include="DsPespaSistem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsPespaSistem.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsPespaSistem.xss">
+      <DependentUpon>DsPespaSistem.xsd</DependentUpon>
+    </None>
+    <None Include="DsProduktAksesore.xsc">
+      <DependentUpon>DsProduktAksesore.xsd</DependentUpon>
+    </None>
+    <None Include="DsProduktAksesore.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsProduktAksesore.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsProduktAksesore.xss">
+      <DependentUpon>DsProduktAksesore.xsd</DependentUpon>
+    </None>
+    <None Include="DsProdukte.xsc">
+      <DependentUpon>DsProdukte.xsd</DependentUpon>
+    </None>
+    <None Include="DsProdukte.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsProdukte.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsProdukte.xss">
+      <DependentUpon>DsProdukte.xsd</DependentUpon>
+    </None>
+    <None Include="DsProdukteProjekte.xsc">
+      <DependentUpon>DsProdukteProjekte.xsd</DependentUpon>
+    </None>
+    <None Include="DsProdukteProjekte.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsProdukteProjekte.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsProdukteProjekte.xss">
+      <DependentUpon>DsProdukteProjekte.xsd</DependentUpon>
+    </None>
+    <None Include="DsProduktetAksesoret.xsc">
+      <DependentUpon>DsProduktetAksesoret.xsd</DependentUpon>
+    </None>
+    <None Include="DsProduktetAksesoret.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsProduktetAksesoret.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsProduktetAksesoret.xss">
+      <DependentUpon>DsProduktetAksesoret.xsd</DependentUpon>
+    </None>
+    <None Include="DsProdukteTotal.xsc">
+      <DependentUpon>DsProdukteTotal.xsd</DependentUpon>
+    </None>
+    <None Include="DsProdukteTotal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsProdukteTotal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsProdukteTotal.xss">
+      <DependentUpon>DsProdukteTotal.xsd</DependentUpon>
+    </None>
+    <None Include="DsProjekteData.xsc">
+      <DependentUpon>DsProjekteData.xsd</DependentUpon>
+    </None>
+    <None Include="DsProjekteData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsProjekteData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsProjekteData.xss">
+      <DependentUpon>DsProjekteData.xsd</DependentUpon>
+    </None>
+    <None Include="DsRaport.xsc">
+      <DependentUpon>DsRaport.xsd</DependentUpon>
+    </None>
+    <None Include="DsRaport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsRaport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsRaport.xss">
+      <DependentUpon>DsRaport.xsd</DependentUpon>
+    </None>
+    <None Include="DsRoleDrejtat.xsc">
+      <DependentUpon>DsRoleDrejtat.xsd</DependentUpon>
+    </None>
+    <None Include="DsRoleDrejtat.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsRoleDrejtat.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsRoleDrejtat.xss">
+      <DependentUpon>DsRoleDrejtat.xsd</DependentUpon>
+    </None>
+    <None Include="DsShtoAksesoreProdukti.xsc">
+      <DependentUpon>DsShtoAksesoreProdukti.xsd</DependentUpon>
+    </None>
+    <None Include="DsShtoAksesoreProdukti.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsShtoAksesoreProdukti.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsShtoAksesoreProdukti.xss">
+      <DependentUpon>DsShtoAksesoreProdukti.xsd</DependentUpon>
+    </None>
+    <None Include="DsXham.xsc">
+      <DependentUpon>DsXham.xsd</DependentUpon>
+    </None>
+    <None Include="DsXham.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsXham.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsXham.xss">
+      <DependentUpon>DsXham.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ShtoProjekt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShtoProjekt.Designer.cs">
+      <DependentUpon>ShtoProjekt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VlereReale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VlereReale.Designer.cs">
+      <DependentUpon>VlereReale.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PespaSistem.mdb">
+    </Content>
+    <None Include="Resources\search_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

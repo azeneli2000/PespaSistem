@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsFatura" targetNamespace="http://tempuri.org/DsFatura.xsd" xmlns:mstns="http://tempuri.org/DsFatura.xsd" xmlns="http://tempuri.org/DsFatura.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsFatura" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsFatura" msprop:Generator_DataSetName="DsFatura">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtAksesore" msprop:Generator_UserTableName="DtAksesore" msprop:Generator_RowDeletedName="DtAksesoreRowDeleted" msprop:Generator_RowChangedName="DtAksesoreRowChanged" msprop:Generator_RowClassName="DtAksesoreRow" msprop:Generator_RowChangingName="DtAksesoreRowChanging" msprop:Generator_RowEvArgName="DtAksesoreRowChangeEvent" msprop:Generator_RowEvHandlerName="DtAksesoreRowChangeEventHandler" msprop:Generator_TableClassName="DtAksesoreDataTable" msprop:Generator_TableVarName="tableDtAksesore" msprop:Generator_RowDeletingName="DtAksesoreRowDeleting" msprop:Generator_TablePropName="DtAksesore">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDDtAksesore" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="IDDtAksesore" msprop:Generator_ColumnVarNameInTable="columnIDDtAksesore" msprop:Generator_ColumnPropNameInRow="IDDtAksesore" msprop:Generator_ColumnPropNameInTable="IDDtAksesoreColumn" type="xs:int" />
+              <xs:element name="IDDtProdukti" msprop:Generator_UserColumnName="IDDtProdukti" msprop:Generator_ColumnVarNameInTable="columnIDDtProdukti" msprop:Generator_ColumnPropNameInRow="IDDtProdukti" msprop:Generator_ColumnPropNameInTable="IDDtProduktiColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_PRODUKT_AKSESORE" msprop:Generator_UserColumnName="ID_PRODUKT_AKSESORE" msprop:Generator_ColumnVarNameInTable="columnID_PRODUKT_AKSESORE" msprop:Generator_ColumnPropNameInRow="ID_PRODUKT_AKSESORE" msprop:Generator_ColumnPropNameInTable="ID_PRODUKT_AKSESOREColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_PRODUKTI" msprop:Generator_UserColumnName="ID_PRODUKTI" msprop:Generator_ColumnVarNameInTable="columnID_PRODUKTI" msprop:Generator_ColumnPropNameInRow="ID_PRODUKTI" msprop:Generator_ColumnPropNameInTable="ID_PRODUKTIColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_AKSESORE_ALUMINI" msprop:Generator_UserColumnName="ID_AKSESORE_ALUMINI" msprop:Generator_ColumnVarNameInTable="columnID_AKSESORE_ALUMINI" msprop:Generator_ColumnPropNameInRow="ID_AKSESORE_ALUMINI" msprop:Generator_ColumnPropNameInTable="ID_AKSESORE_ALUMINIColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_AKSESORE_XHAMI" msprop:Generator_UserColumnName="ID_AKSESORE_XHAMI" msprop:Generator_ColumnVarNameInTable="columnID_AKSESORE_XHAMI" msprop:Generator_ColumnPropNameInRow="ID_AKSESORE_XHAMI" msprop:Generator_ColumnPropNameInTable="ID_AKSESORE_XHAMIColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_AKSESORE" msprop:Generator_UserColumnName="ID_AKSESORE" msprop:Generator_ColumnVarNameInTable="columnID_AKSESORE" msprop:Generator_ColumnPropNameInRow="ID_AKSESORE" msprop:Generator_ColumnPropNameInTable="ID_AKSESOREColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FORMULA" msprop:Generator_UserColumnName="FORMULA" msprop:Generator_ColumnVarNameInTable="columnFORMULA" msprop:Generator_ColumnPropNameInRow="FORMULA" msprop:Generator_ColumnPropNameInTable="FORMULAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="KOD_AKSESORI" msprop:Generator_UserColumnName="KOD_AKSESORI" msprop:Generator_ColumnVarNameInTable="columnKOD_AKSESORI" msprop:Generator_ColumnPropNameInRow="KOD_AKSESORI" msprop:Generator_ColumnPropNameInTable="KOD_AKSESORIColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="EMER_AKSESORI" msprop:Generator_UserColumnName="EMER_AKSESORI" msprop:Generator_ColumnVarNameInTable="columnEMER_AKSESORI" msprop:Generator_ColumnPropNameInRow="EMER_AKSESORI" msprop:Generator_ColumnPropNameInTable="EMER_AKSESORIColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CMIMI" msprop:Generator_UserColumnName="CMIMI" msprop:Generator_ColumnVarNameInTable="columnCMIMI" msprop:Generator_ColumnPropNameInRow="CMIMI" msprop:Generator_ColumnPropNameInTable="CMIMIColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SASIA" msprop:Generator_UserColumnName="SASIA" msprop:Generator_ColumnVarNameInTable="columnSASIA" msprop:Generator_ColumnPropNameInRow="SASIA" msprop:Generator_ColumnPropNameInTable="SASIAColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PESHA_SPECIFIKE" msprop:Generator_UserColumnName="PESHA_SPECIFIKE" msprop:Generator_ColumnPropNameInRow="PESHA_SPECIFIKE" msprop:Generator_ColumnVarNameInTable="columnPESHA_SPECIFIKE" msprop:Generator_ColumnPropNameInTable="PESHA_SPECIFIKEColumn" type="xs:decimal" default="1" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DtProdukte" msprop:Generator_UserTableName="DtProdukte" msprop:Generator_RowDeletedName="DtProdukteRowDeleted" msprop:Generator_RowChangedName="DtProdukteRowChanged" msprop:Generator_RowClassName="DtProdukteRow" msprop:Generator_RowChangingName="DtProdukteRowChanging" msprop:Generator_RowEvArgName="DtProdukteRowChangeEvent" msprop:Generator_RowEvHandlerName="DtProdukteRowChangeEventHandler" msprop:Generator_TableClassName="DtProdukteDataTable" msprop:Generator_TableVarName="tableDtProdukte" msprop:Generator_RowDeletingName="DtProdukteRowDeleting" msprop:Generator_TablePropName="DtProdukte">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDDtProdukti" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="IDDtProdukti" msprop:Generator_ColumnVarNameInTable="columnIDDtProdukti" msprop:Generator_ColumnPropNameInRow="IDDtProdukti" msprop:Generator_ColumnPropNameInTable="IDDtProduktiColumn" type="xs:int" />
+              <xs:element name="ID_PRODUKTI" msprop:Generator_UserColumnName="ID_PRODUKTI" msprop:Generator_ColumnVarNameInTable="columnID_PRODUKTI" msprop:Generator_ColumnPropNameInRow="ID_PRODUKTI" msprop:Generator_ColumnPropNameInTable="ID_PRODUKTIColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="EMER_PRODUKTI" msprop:Generator_UserColumnName="EMER_PRODUKTI" msprop:Generator_ColumnVarNameInTable="columnEMER_PRODUKTI" msprop:Generator_ColumnPropNameInRow="EMER_PRODUKTI" msprop:Generator_ColumnPropNameInTable="EMER_PRODUKTIColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LLOJ_PRODUKTI" msprop:Generator_UserColumnName="LLOJ_PRODUKTI" msprop:Generator_ColumnVarNameInTable="columnLLOJ_PRODUKTI" msprop:Generator_ColumnPropNameInRow="LLOJ_PRODUKTI" msprop:Generator_ColumnPropNameInTable="LLOJ_PRODUKTIColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LLOJ_SISTEMI" msprop:Generator_UserColumnName="LLOJ_SISTEMI" msprop:Generator_ColumnVarNameInTable="columnLLOJ_SISTEMI" msprop:Generator_ColumnPropNameInRow="LLOJ_SISTEMI" msprop:Generator_ColumnPropNameInTable="LLOJ_SISTEMIColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GJERESI" msprop:Generator_UserColumnName="GJERESI" msprop:Generator_ColumnVarNameInTable="columnGJERESI" msprop:Generator_ColumnPropNameInRow="GJERESI" msprop:Generator_ColumnPropNameInTable="GJERESIColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LARTESI" msprop:Generator_UserColumnName="LARTESI" msprop:Generator_ColumnVarNameInTable="columnLARTESI" msprop:Generator_ColumnPropNameInRow="LARTESI" msprop:Generator_ColumnPropNameInTable="LARTESIColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SIPERFAQE" msprop:Generator_UserColumnName="SIPERFAQE" msprop:Generator_ColumnVarNameInTable="columnSIPERFAQE" msprop:Generator_ColumnPropNameInRow="SIPERFAQE" msprop:Generator_ColumnPropNameInTable="SIPERFAQEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NR_KANATE" msprop:Generator_UserColumnName="NR_KANATE" msprop:Generator_ColumnVarNameInTable="columnNR_KANATE" msprop:Generator_ColumnPropNameInRow="NR_KANATE" msprop:Generator_ColumnPropNameInTable="NR_KANATEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NR_VETRATA" msprop:Generator_UserColumnName="NR_VETRATA" msprop:Generator_ColumnVarNameInTable="columnNR_VETRATA" msprop:Generator_ColumnPropNameInRow="NR_VETRATA" msprop:Generator_ColumnPropNameInTable="NR_VETRATAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NR_COPE" msprop:Generator_UserColumnName="NR_COPE" msprop:Generator_ColumnVarNameInTable="columnNR_COPE" msprop:Generator_ColumnPropNameInRow="NR_COPE" msprop:Generator_ColumnPropNameInTable="NR_COPEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PREVENTIVI" msprop:Generator_UserColumnName="PREVENTIVI" msprop:Generator_ColumnVarNameInTable="columnPREVENTIVI" msprop:Generator_ColumnPropNameInRow="PREVENTIVI" msprop:Generator_ColumnPropNameInTable="PREVENTIVIColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DtAksesore" />
+      <xs:field xpath="mstns:IDDtAksesore" />
+    </xs:unique>
+    <xs:unique name="DtProdukte_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DtProdukte" />
+      <xs:field xpath="mstns:IDDtProdukti" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="DtProdukte_DtAksesore" msdata:parent="DtProdukte" msdata:child="DtAksesore" msdata:parentkey="IDDtProdukti" msdata:childkey="IDDtProdukti" msprop:Generator_UserRelationName="DtProdukte_DtAksesore" msprop:Generator_RelationVarName="relationDtProdukte_DtAksesore" msprop:Generator_UserChildTable="DtAksesore" msprop:Generator_UserParentTable="DtProdukte" msprop:Generator_ParentPropName="DtProdukteRow" msprop:Generator_ChildPropName="GetDtAksesoreRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
